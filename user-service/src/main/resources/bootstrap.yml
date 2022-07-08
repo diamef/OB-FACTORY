@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: user-service
+    
+  cloud:
+    config:
+      uri: http://localhost:9120
+
+
+app:
+  config:
+    keycloak:
+      server-url: http://localhost:8089/auth
+      realm: commune
+      client-secret: bf06bc5a-7aaa-44d7-9158-d56dc9ebd405
+      client-id: sama-client
