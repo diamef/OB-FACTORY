@@ -14,7 +14,7 @@ public class SecurityConfiguration {
         http
                 .authorizeExchange()
                 //ALLOWING REGISTER API FOR DIRECT ACCESS
-                .pathMatchers("/api/v1/users/**").permitAll()
+                .pathMatchers("/users/public/hello").permitAll()
                 //ALL OTHER APIS ARE AUTHENTICATED
                 .anyExchange().authenticated()
                 .and()
@@ -26,4 +26,3 @@ public class SecurityConfiguration {
         return http.build();
     }
 }
-

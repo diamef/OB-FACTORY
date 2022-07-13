@@ -1,8 +1,8 @@
 package com.attijariwafabank.obfactory.gatewayservice.Beans;
 
-import org.springframework.cloud.client.discovery.ReactiveDiscoveryClient;
-import org.springframework.cloud.gateway.discovery.DiscoveryClientRouteDefinitionLocator;
-import org.springframework.cloud.gateway.discovery.DiscoveryLocatorProperties;
+// import org.springframework.cloud.client.discovery.ReactiveDiscoveryClient;
+// import org.springframework.cloud.gateway.discovery.DiscoveryClientRouteDefinitionLocator;
+// import org.springframework.cloud.gateway.discovery.DiscoveryLocatorProperties;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +18,7 @@ public class BeanConfig {
                 //         .uri("lb://FIRST-SERVICE/"))
                 //         .id("first-service"))
                 .route(p -> p
-                     .path("/api/v1/users/**")
+                     .path("/users/**")
                      .uri("lb://USER-SERVICE"))
                      .build();
     }
